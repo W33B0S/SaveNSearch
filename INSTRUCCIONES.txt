@@ -1,0 +1,6 @@
+Para ejecutar se debe escoger el directorio del proyecto y realizar el siguiente comando en la terminal de visual code: 
+|venv\Scripts\activate| (activa el entorno virtual VENV de python, donde se encuentran las dependencias y otros archivos de importancia).
+Luego se aplica |python app.py| y se abre el website en la dirección localhost a la que se le asigna mediante la terminal.
+
+Instalar dependencias:
+pip install -r requirements.txt

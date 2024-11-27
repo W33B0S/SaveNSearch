@@ -1,0 +1,65 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hola",
+        "Hey",
+        "hi",
+        "hello",
+        "que tal",
+        "hay alguien ahi?",
+        "buen dia"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hola, bienvenido",
+        "Saludos,¿que puedo hacer por ti?",
+        "Saludos,¿en que te puedo ayudar?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "chau", "nos vemos", "adios"],
+      "responses": [
+        "Nos vemos, gracias por visitarnos.",
+        "Que tengas un lindo dia.",
+        "Adios! Vuelve pronto."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "gracias", "util", "muchas gracias", "thx"],
+      "responses": ["Un gusto ayudar!", "Cuando quieras!", "El placer es mio"]
+    },
+    {
+      "tag": "purpose",
+      "patterns": [
+        "en que se orienta esta pagina",
+        "que es esta pagina"
+      ],
+      "responses": [
+        "Este es un website dedicado a seleccionar y comparar productos especificos entre supermercados.",
+        "Este website esta orientado a comparar precios entre supermercados."
+      ]
+    },
+    {
+      "tag": "supermarkets",
+      "patterns": [
+        "que supermercados estan en la pagina",
+        "que tipo de supermercados comparan",
+        "cuantos supermercados hay en la pagina",
+        "que tipo de productos comparan",
+        "como se comparan los productos",
+        "de donde comparan los supermercados"
+      ],
+      "responses": [
+        "Actualmente hay 4 supermercados que estan disponibles a comparar; los cuales son Metro, Plaza Vea, Tottus y Fronco Retail.",
+        "Aqui se comparan supermercados dedicados a la venta de abarrotes.",
+        "Se comparan productos relacionados a la categoría de abarrotes.",
+        "El como se comparan los productos esta basado en marca y precio.",
+        "Nuestro website está orientado a supermercados de Lima."
+      ]
+    }
+  ]
+}
