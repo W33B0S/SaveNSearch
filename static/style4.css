@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(1, 87, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form{
+    overflow: hidden;
+    background-color:white;
+    background: linear-gradient(to right, #d3f9d4, #e5ffe5, #ffffff);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(1, 61, 6);
+    width: 500px;
+    height: 525px;
+    opacity: 0; /* Comienza invisible */
+    transform: translate;
+    animation: appear 0.75s forwards; /* Aplicar la animación */
+}
+
+
+.hidden {
+    display: none; /* Oculta el contenedor inicialmente */
+}
+
+@keyframes appear {
+    to {
+        opacity: 1; /* Finaliza visible */
+        transform: translateY(0); /* Finaliza en su posición original */
+    }
+}
+
+h1 {
+    margin-top: -20px;
+    text-align: center;
+    color: black;
+    
+}
+
+.form-control {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    padding: 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    font-size: 15px;
+}
+
+.form-control:hover {
+    transition: 0.25s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.325);
+}
+
+.btn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
+    padding: 20px;
+    background-color: rgb(255, 255, 236);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #000000;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    font-size: 17.5px;
+    font-family: 'Roboto';
+}
+
+.btn:hover {
+    background-color: #069335;
+    transition: 0.25s;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background: linear-gradient(to bottom, #069335, #068731, #06ba42);
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+
+.message {
+    text-align: center;
+}
+
+.message a{
+    text-decoration: none;
+}
+.message a:hover{
+    color: black;
+    transition: 0.1s;
+    font-weight: bold;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    form {
+        padding: 30px; /* Menos padding en pantallas pequeñas */
+    }
+
+    input, button {
+        padding: 12px; /* Menos padding en inputs y botones */
+    }
+
+    button {
+        width: 90%; /* Botón ocupa más ancho en pantallas pequeñas */
+    }
+}
