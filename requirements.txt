@@ -1,9 +1,9 @@
 beautifulsoup4
-Flask
-Flask-Limiter
-Flask-Login
-Flask-MySQLdb
-Flask-WTF
+flask
+flask-fimiter
+flask-fogin
+flask-mysqldb
+flask-wtf
 numpy==1.26.4
 passlib
 requests
