@@ -1,7 +1,7 @@
 beautifulsoup4
 flask
-flask-fimiter
-flask-fogin
+flask-limiter
+flask-login
 flask-mysqldb
 flask-wtf
 numpy==1.26.4
