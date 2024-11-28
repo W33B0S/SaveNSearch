@@ -1,0 +1,9 @@
+runtime: python311
+entrypoint: gunicorn -b :$PORT app:app
+
+# Variables de entorno
+env_variables:
+  SECRET_KEY: "VdhfdjnFtyhdudsbvdhfdhdygGF3573"
+  MYSQL_USER: "root"
+  MYSQL_PASSWORD: "333333"
+  MYSQL_DB: "sns-gen-db"
