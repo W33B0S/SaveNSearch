@@ -2,9 +2,9 @@ class MConfig:
     #DB
     SECRET_KEY = "VdhfdjnFtyhdudsbvdhfdhdygGF3573"
     MYSQL_HOST = '34.28.135.203'
-    MYSQL_USER = 'DEV-sns'
-    MYSQL_PASSWORD = '#10128240'
-    MYSQL_DB = 'sns-db-ins'
+    MYSQL_USER = 'root'
+    MYSQL_PASSWORD = '333333'
+    MYSQL_DB = 'sns-gen-db'
     MYSQL_PORT = 3306
     
     #CACHE
