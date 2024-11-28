@@ -35,9 +35,8 @@ def catalogos_get():
     scraper = CatalogosScraper(mysql)
     products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[0])
     products_franco = scraper.scrape_franco(scraper.franco_urls[0])
-    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[0])
 
-    return render_template('catalogos.html', products=products_plazavea, products2=products_franco, products3=products_tottus)
+    return render_template('catalogos.html', products=products_plazavea, products2=products_franco)
 
 @limitador.limit("85 per minute")
 @app.route('/aceites')
@@ -46,9 +45,8 @@ def aceites_get():
     scraper = CatalogosScraper(mysql)
     products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[1])
     products_franco = scraper.scrape_franco(scraper.franco_urls[1])
-    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[1])
 
-    return render_template('catalogos.html', products=products_plazavea, products2=products_franco, products3=products_tottus)
+    return render_template('catalogos.html', products=products_plazavea, products2=products_franco)
 
 @limitador.limit("85 per minute")
 @app.route('/azucares')
@@ -57,9 +55,8 @@ def azucares_get():
     scraper = CatalogosScraper(mysql)
     products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[2])
     products_franco = scraper.scrape_franco(scraper.franco_urls[2])
-    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[2])
 
-    return render_template('catalogos.html', products=products_plazavea, products2=products_franco, products3=products_tottus)
+    return render_template('catalogos.html', products=products_plazavea, products2=products_franco)
 
 @limitador.limit("85 per minute")
 @app.route('/pastas')
@@ -68,9 +65,8 @@ def pastas_get():
     scraper = CatalogosScraper(mysql)
     products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[3])
     products_franco = scraper.scrape_franco(scraper.franco_urls[3])
-    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[3])
 
-    return render_template('catalogos.html', products=products_plazavea, products2=products_franco, products3=products_tottus)
+    return render_template('catalogos.html', products=products_plazavea, products2=products_franco)
 
 @limitador.limit("85 per minute")
 @app.route('/condimentos')
@@ -79,9 +75,8 @@ def condimentos_get():
     scraper = CatalogosScraper(mysql)
     products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[4])
     products_franco = scraper.scrape_franco(scraper.franco_urls[4])
-    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[4])
 
-    return render_template('catalogos.html', products=products_plazavea, products2=products_franco, products3=products_tottus)
+    return render_template('catalogos.html', products=products_plazavea, products2=products_franco)
 
 @limitador.limit("85 per minute")
 @app.route('/menestras')
@@ -90,9 +85,8 @@ def menestras_get():
     scraper = CatalogosScraper(mysql)
     products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[5])
     products_franco = scraper.scrape_franco(scraper.franco_urls[5])
-    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[5])
 
-    return render_template('catalogos.html', products=products_plazavea, products2=products_franco, products3=products_tottus)
+    return render_template('catalogos.html', products=products_plazavea, products2=products_franco)
 
 @limitador.limit("85 per minute")
 @app.route('/conservas')
@@ -101,9 +95,8 @@ def conservas_get():
     scraper = CatalogosScraper(mysql)
     products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[6])
     products_franco = scraper.scrape_franco(scraper.franco_urls[6])
-    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[6])
 
-    return render_template('catalogos.html', products=products_plazavea, products2=products_franco, products3=products_tottus)
+    return render_template('catalogos.html', products=products_plazavea, products2=products_franco)
 
 @limitador.limit("85 per minute")
 @app.route('/frutas')
@@ -112,9 +105,8 @@ def frutas_get():
     scraper = CatalogosScraper(mysql)
     products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[7])
     products_franco = scraper.scrape_franco(scraper.franco_urls[7])
-    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[7])
 
-    return render_template('catalogos.html', products=products_plazavea, products2=products_franco, products3=products_tottus)
+    return render_template('catalogos.html', products=products_plazavea, products2=products_franco)
 
 @limitador.limit("85 per minute")
 @app.route('/verduras')
@@ -123,9 +115,8 @@ def verduras_get():
     scraper = CatalogosScraper(mysql)
     products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[8])
     products_franco = scraper.scrape_franco(scraper.franco_urls[8])
-    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[8])
 
-    return render_template('catalogos.html', products=products_plazavea, products2=products_franco, products3=products_tottus)
+    return render_template('catalogos.html', products=products_plazavea, products2=products_franco)
 
 @app.route("/sobrenosotros")
 def sobrenosotros_get():
