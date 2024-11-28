@@ -10,8 +10,8 @@ chrome_options = Options()
 chrome_options.add_argument("--headless")
 
 class CatalogosScraper:
-    def __init__(self):
-        #self.mysql = mysql
+    def __init__(self, mysql):
+        self.mysql = mysql
         self.plazavea_urls = plazavea
         self.franco_urls = franco
         self.tottus_urls = tottus
@@ -34,9 +34,9 @@ class CatalogosScraper:
                 'image_url': image_url
             })
             
-            #hashed_prod = pbkdf2_sha256.hash(producto_url)
+            hashed_prod = pbkdf2_sha256.hash(producto_url)
 
-            #self.save_to_database(titulo, precio, hashed_prod, 1, id_c)
+            self.save_to_database(titulo, precio, hashed_prod, 1, id_c)
 
         return products
 
@@ -59,9 +59,9 @@ class CatalogosScraper:
                 'image_url': image_url2
             })
             
-            #hashed_prod2 = pbkdf2_sha256.hash(producto_url2)
+            hashed_prod2 = pbkdf2_sha256.hash(producto_url2)
 
-            #self.save_to_database(titulo2, precio2, hashed_prod2, 2, id_c)
+            self.save_to_database(titulo2, precio2, hashed_prod2, 2, id_c)
 
         return products2
     
@@ -88,24 +88,24 @@ class CatalogosScraper:
                 'image_url': image_url3
             })
                 
-            #hashed_prod3 = pbkdf2_sha256.hash(producto_url3)
+            hashed_prod3 = pbkdf2_sha256.hash(producto_url3)
 
-            #self.save_to_database(titulo3, precio3, hashed_prod3, 3, id_c)
+            self.save_to_database(titulo3, precio3, hashed_prod3, 3, id_c)
 
         driver.quit()
 
         return products3
 
-#    def save_to_database(self, titulo, precio, hashed_prod, id_s, id_c):
-#        cursor = self.mysql.connection.cursor()
-#        cursor.execute('SELECT * FROM productos WHERE descripcion = %s', (titulo,))
-#        result = cursor.fetchone()
-#        
-#        if result is None:
-#            cursor.execute('INSERT INTO productos (id_c, id_url, id_s, descripcion, precio) VALUES (%s, %s, %s, %s, %s)', (id_c, hashed_prod, id_s, titulo, precio))
-#        else:
-#            id_p = result[0]
-#            cursor.execute('UPDATE productos SET descripcion = %s, precio = %s WHERE id_p = %s', (titulo, precio, id_p))
-#        
-#        self.mysql.connection.commit()
-#        cursor.close()
+    def save_to_database(self, titulo, precio, hashed_prod, id_s, id_c):
+        cursor = self.mysql.connection.cursor()
+        cursor.execute('SELECT * FROM productos WHERE descripcion = %s', (titulo,))
+        result = cursor.fetchone()
+        
+        if result is None:
+            cursor.execute('INSERT INTO productos (id_c, id_url, id_s, descripcion, precio) VALUES (%s, %s, %s, %s, %s)', (id_c, hashed_prod, id_s, titulo, precio))
+        else:
+            id_p = result[0]
+            cursor.execute('UPDATE productos SET descripcion = %s, precio = %s WHERE id_p = %s', (titulo, precio, id_p))
+        
+        self.mysql.connection.commit()
+        cursor.close()
