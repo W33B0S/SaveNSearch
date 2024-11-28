@@ -49,9 +49,9 @@ def index_get():
 @cache.cached(timeout=420)
 def catalogos_get():
     scraper = CatalogosScraper(mysql)
-    products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[0], id_c=1)
-    products_franco = scraper.scrape_franco(scraper.franco_urls[0], id_c=1)
-    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[0], id_c=1)
+    products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[0])
+    products_franco = scraper.scrape_franco(scraper.franco_urls[0])
+    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[0])
 
     return render_template('catalogos.html', products=products_plazavea, products2=products_franco, products3=products_tottus)
 
@@ -60,9 +60,9 @@ def catalogos_get():
 @cache.cached(timeout=420)
 def aceites_get():
     scraper = CatalogosScraper(mysql)
-    products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[1], id_c=2)
-    products_franco = scraper.scrape_franco(scraper.franco_urls[1], id_c=2)
-    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[1], id_c=2)
+    products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[1])
+    products_franco = scraper.scrape_franco(scraper.franco_urls[1])
+    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[1])
 
     return render_template('catalogos.html', products=products_plazavea, products2=products_franco, products3=products_tottus)
 
@@ -71,9 +71,9 @@ def aceites_get():
 @cache.cached(timeout=420)
 def azucares_get():
     scraper = CatalogosScraper(mysql)
-    products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[2], id_c=3)
-    products_franco = scraper.scrape_franco(scraper.franco_urls[2], id_c=3)
-    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[2], id_c=3)
+    products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[2])
+    products_franco = scraper.scrape_franco(scraper.franco_urls[2])
+    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[2])
 
     return render_template('catalogos.html', products=products_plazavea, products2=products_franco, products3=products_tottus)
 
@@ -82,9 +82,9 @@ def azucares_get():
 @cache.cached(timeout=420)
 def pastas_get():
     scraper = CatalogosScraper(mysql)
-    products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[3], id_c=4)
-    products_franco = scraper.scrape_franco(scraper.franco_urls[3], id_c=4)
-    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[3], id_c=4)
+    products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[3])
+    products_franco = scraper.scrape_franco(scraper.franco_urls[3])
+    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[3])
 
     return render_template('catalogos.html', products=products_plazavea, products2=products_franco, products3=products_tottus)
 
@@ -93,9 +93,9 @@ def pastas_get():
 @cache.cached(timeout=10)
 def condimentos_get():
     scraper = CatalogosScraper(mysql)
-    products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[4], id_c=5)
-    products_franco = scraper.scrape_franco(scraper.franco_urls[4], id_c=5)
-    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[4], id_c=5)
+    products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[4])
+    products_franco = scraper.scrape_franco(scraper.franco_urls[4])
+    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[4])
 
     return render_template('catalogos.html', products=products_plazavea, products2=products_franco, products3=products_tottus)
 
@@ -104,9 +104,9 @@ def condimentos_get():
 @cache.cached(timeout=420)
 def menestras_get():
     scraper = CatalogosScraper(mysql)
-    products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[5], id_c=6)
-    products_franco = scraper.scrape_franco(scraper.franco_urls[5], id_c=6)
-    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[5], id_c=6)
+    products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[5])
+    products_franco = scraper.scrape_franco(scraper.franco_urls[5])
+    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[5])
 
     return render_template('catalogos.html', products=products_plazavea, products2=products_franco, products3=products_tottus)
 
@@ -115,9 +115,9 @@ def menestras_get():
 @cache.cached(timeout=420)
 def conservas_get():
     scraper = CatalogosScraper(mysql)
-    products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[6], id_c=7)
-    products_franco = scraper.scrape_franco(scraper.franco_urls[6], id_c=7)
-    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[6], id_c=7)
+    products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[6])
+    products_franco = scraper.scrape_franco(scraper.franco_urls[6])
+    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[6])
 
     return render_template('catalogos.html', products=products_plazavea, products2=products_franco, products3=products_tottus)
 
@@ -126,9 +126,9 @@ def conservas_get():
 @cache.cached(timeout=420)
 def frutas_get():
     scraper = CatalogosScraper(mysql)
-    products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[7], id_c=8)
-    products_franco = scraper.scrape_franco(scraper.franco_urls[7], id_c=8)
-    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[7], id_c=8)
+    products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[7])
+    products_franco = scraper.scrape_franco(scraper.franco_urls[7])
+    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[7])
 
     return render_template('catalogos.html', products=products_plazavea, products2=products_franco, products3=products_tottus)
 
@@ -137,9 +137,9 @@ def frutas_get():
 @cache.cached(timeout=420)
 def verduras_get():
     scraper = CatalogosScraper(mysql)
-    products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[8], id_c=9)
-    products_franco = scraper.scrape_franco(scraper.franco_urls[8], id_c=9)
-    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[8], id_c=9)
+    products_plazavea = scraper.scrape_plazavea(scraper.plazavea_urls[8])
+    products_franco = scraper.scrape_franco(scraper.franco_urls[8])
+    products_tottus = scraper.scrape_tottus(scraper.tottus_urls[8])
 
     return render_template('catalogos.html', products=products_plazavea, products2=products_franco, products3=products_tottus)
 
