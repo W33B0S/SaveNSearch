@@ -6,7 +6,6 @@
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
     <div class="container">
@@ -39,7 +38,6 @@
                     {% endfor %}
                 </div>
                 <div class="form-group">
-                    <div class="g-recaptcha" data-sitekey="6Lf4D3sqAAAAAGkuTs1tgra-WVxqx92Mf9JN6bNF"></div> <br/>
                     {{ form.submit(class="btn btn-primary") }}
                 </div>
                 <p class="message">¿Aún no se ha registrado? <a href="/register">Cree una cuenta aquí</a></p>
