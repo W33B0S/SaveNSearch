@@ -24,22 +24,6 @@ limitador = Limiter(
     default_limits=["5 per second"]
 )
 
-def soy_humano(captcha_response):
-    secretkey = "6Lf4D3sqAAAAAMROAva2_HlqVWl2J9j019MTq6_V"
-    payload = {'response':captcha_response, 'secret':secretkey}
-    response = requests.post("https://www.google.com/recaptcha/api/siteverify", payload)
-    response_text = json.loads(response.text)
-    return response_text['success']
-
-@app.route('/process_url', methods=['POST'])
-def process_url():
-    url_val = request.form['url']
-    
-    if validacionCAPTCHA.localhost_identifier(request) and validacionCAPTCHA.url_segura(url_val):
-        return 'URL procesada correctamente'
-    else:
-        return 'Acceso denegado o URL no válida', 403
-
 @app.route("/")
 def index_get():
     return render_template("index.html")
@@ -179,11 +163,6 @@ def login():
     if form.validate_on_submit():
         username = form.username.data
         password = form.password.data
-        captcha_response = request.form['g-recaptcha-response']
-
-        if not soy_humano(captcha_response):
-            flash('Por favor, verifica que no eres un robot.')
-            return redirect(url_for('login'))
 
         cursor = mysql.connection.cursor()
         cursor.execute('SELECT mk3u5sno0, bfdfshi1d FROM vufbsdgrb WHERE pvbjdth2l = %s', (username,))
